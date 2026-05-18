@@ -360,15 +360,22 @@ header {
 
 /* Role = */
 .role-eq {
-  display: grid; grid-template-columns: auto 1fr;
-  gap: 6px 8px; margin-bottom: 11px; align-items: start;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 11px;
 }
 .role-tag {
   background: var(--c-auth); color: white;
-  border-radius: 3px; padding: 3px 7px;
-  font-size: 11px; font-weight: 700; white-space: nowrap; margin-top: 2px;
+  border-radius: 3px; padding: 5px 8px;
+  font-size: 11px; font-weight: 700; white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0;
+  /* vertically center to first item */
+  align-self: flex-start;
+  line-height: 1.5;
 }
-.role-items { display: flex; flex-direction: column; gap: 6px; }
+.role-items { display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .role-item {
   background: white; border: 1px solid #fecdd3;
   border-radius: 5px; padding: 7px 9px;
